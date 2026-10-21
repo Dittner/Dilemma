@@ -1,0 +1,12 @@
+.DS_Store
+.venv
+.idea
+.vscode
+*/ssl
+.env
+.log*
+*.lock
+__pycache__
+
+/data
+/design
