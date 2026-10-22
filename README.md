@@ -34,7 +34,6 @@ for e in examples:
 >>> criteria -> ['criterion']
 >>> understood -> ['understand']
 >>> algae -> ['alga', 'algae']
-
 ```
 
 To see more examples, look at the tests:
@@ -53,7 +52,7 @@ cd en_lemmatizer
 uv sync
 uv run main.py
 pytest tests/test_lemmatizer.py 
-````
+```
 
 ## License
 MIT
