@@ -32,3 +32,11 @@ def lemmatize(word: str) -> list[str]:
         return sorted(set(res), key=len)
     else:
         return res
+
+
+def get_past_and_perfect_form(irregular_verb: str) -> tuple[str, str] | None:
+    vv = verbs.find(irregular_verb)
+    if len(vv) > 0:
+        return verbs.get_past_and_perfect_form(irregular_verb)
+    else:
+        return None

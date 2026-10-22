@@ -15,6 +15,12 @@ if __name__ == '__main__':
     or it can be the verb "sing" with the prefix "mis-".
     """
 
+    # examples2 = ['misunderstand']
+    # for e in examples2:
+    #     res = get_past_and_perfect_form(e)
+    #     if res is not None:
+    #         print(f'{e} -> {res[0], res[1]}')
+
     examples = ['missing', 'lazy', 'buries', 'best', 'criteria', 'understood', 'algae']
     for e in examples:
         res = lemmatize(e)

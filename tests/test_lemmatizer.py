@@ -1,4 +1,4 @@
-from dilemma.lemmatizer import lemmatize
+from dilemma.lemmatizer import lemmatize, get_past_and_perfect_form
 
 
 def test_empty_input():
@@ -70,6 +70,45 @@ def test_irreg_verbs():
         forms = forms.split('|')
         for form in forms:
             assert inf in lemmatize(form)
+
+def test_irreg_verb_forms():
+    vv = [
+        ('be', 'was', 'been'),
+        ('be', 'were', 'been'),
+        ('do', 'did', 'done'),
+        ('go', 'went' ,'gone'), 
+        ('have', 'had', 'had'), 
+        ('rebuild', 'rebuilt', 'rebuilt'),
+        ('sunburn', 'sunburnt', 'sunburnt'),
+        ('radiobroadcast', 'radiobroadcast', 'radiobroadcast'),
+        ('mischoose', 'mischose', 'mischosen'),
+        ('lie', 'lied', 'lied'),
+        ('lie', 'lay', 'lain'),
+        ('prepay', 'prepaid', 'prepaid'),
+        ('ring', 'ran', 'rung'),
+        ('arise', 'arose', 'arisen'),
+        ('foresee', 'foresaw' ,'foreseen'),
+        ('outseek', 'outsought', 'outsought'),
+        ('shed', 'shed', 'shed'),
+        ('overshoot', 'overshot', 'overshot'),
+        ('shrive', 'shrove', 'shriven'),
+        ('outsit', 'outsat', 'outsat'),
+        ('misunderstand', 'misunderstood', 'misunderstood'),
+        ('outswim', 'outswam', 'outswum'),
+        ('downthrow', 'downthrew', 'downthrown'),
+        ('reawake', 'reawoke', 'reawoken'),
+        ('handwrite', 'handwrote', 'handwritten'),
+    ]
+
+    for inf, past, perfect in vv:
+        res = get_past_and_perfect_form(inf)
+
+        assert res is not None
+
+        res_past, res_perfect = res
+        assert past in res_past.split('/')
+        assert perfect in res_perfect.split('/')
+
 
 def test_plural_nouns():
     nouns = [
