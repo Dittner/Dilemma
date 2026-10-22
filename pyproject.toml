@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dilemma"
+name = "Dilemma"
 version = "0.2.0"
 description = "A dictionary-based lemmatization for quick lookup of an unknown word."
 readme = "README.md"
@@ -12,7 +12,6 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Topic :: NLP",
 ]
 
 [project.urls]
@@ -26,8 +25,9 @@ packages = ["dilemma"]
 "dilemma" = "dilemma"
 "data" = "dilemma/data"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
+    "hatch>=1.18.1",
     "mypy>=1.17.1",
     "pytest>=8.4.1",
     "ruff>=0.12.9",
