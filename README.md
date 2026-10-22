@@ -42,13 +42,17 @@ https://github.com/Dittner/Dilemma/blob/main/tests/test_lemmatizer.py
 
 ## Install
 ```bash
-pip install git+https://github.com/Dittner/Dilemma
+pip install "git+https://github.com/Dittner/Dilemma"
+```
+or
+```bash
+uv add "git+https://github.com/Dittner/Dilemma"
 ```
 
 ## To run locally
 ```bash
 git clone https://github.com/Dittner/Dilemma
-cd en_lemmatizer
+cd Dilemma
 uv sync
 uv run main.py
 uv run pytest tests/test_lemmatizer.py
