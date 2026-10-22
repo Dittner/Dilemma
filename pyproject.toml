@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "Dilemma"
-version = "0.2.0"
+version = "0.2.1"
 description = "A dictionary-based lemmatization for quick lookup of an unknown word."
 readme = "README.md"
 requires-python = ">=3.13"
