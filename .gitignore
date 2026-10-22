@@ -7,7 +7,5 @@
 .log*
 *.lock
 __pycache__
-
-/data
 /design
 utils.py
