@@ -2,7 +2,7 @@
 A dictionary-based lemmatization for quick lookup of an unknown word.
 
 
-## What does this module do?
+## Features
 1. Verbs
     + removes plural endings;
     + converts a verb from the past tense to the present tense (including irregular verbs);
@@ -24,8 +24,9 @@ examples = ['missing', 'lazy', 'buries', 'criteria', 'understood', 'algae']
 for e in examples:
     res = lemmatize(e)
     print(f'{e} -> {res}')
+```
 
-"""
+```terminal
 >>> missing -> ['miss', 'missing']
 >>> lazy -> ['lazy']
 >>> buries -> ['bury']
@@ -33,21 +34,20 @@ for e in examples:
 >>> criteria -> ['criterion']
 >>> understood -> ['understand']
 >>> algae -> ['alga', 'algae']
-"""
 
 ```
 
 To see more examples, look at the tests:
-https://github.com/Dittner/en_lemmatizer/tests/test_lemmatizer.py
+https://github.com/Dittner/en_lemmatizer/blob/main/tests/test_lemmatizer.py
 
 
 ## Install
-```cmd
+```bash
 pip install git+https://github.com/Dittner/en_lemmatizer
 ```
 
 ## To run locally
-```cmd
+```bash
 git clone https://github.com/Dittner/en_lemmatizer
 cd <Project-Dir>
 uv sync

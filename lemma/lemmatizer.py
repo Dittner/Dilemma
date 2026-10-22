@@ -29,16 +29,6 @@ def lemmatize(word: str) -> list[str]:
     res = nn + vv + ad + aa
 
     if len(res) > 1:
-        return sorted(set(res), key=lambda item: len(item))
+        return sorted(set(res), key=len)
     else:
         return res
-
-
-# def parse():
-#     adjectives_coprus = Corpus(Path(__file__).resolve().parent / 'data/adverbs.txt')
-#     top100_coprus = Corpus(Path(__file__).resolve().parent / 'data/conj_prep.txt')
-#     unique = top100_coprus.words - adjectives_coprus.words
-#     unique_words = sorted(unique)
-#     print('Unique words num: ', len(unique_words))
-#     for v in unique_words:
-#         print(v)
