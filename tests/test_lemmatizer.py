@@ -107,7 +107,7 @@ def test_plural_nouns():
         assert sg in lemmatize(pl)
 
 def test_comparative_adjectives():
-    nouns = [
+    aa = [
         ('large', 'larger'),
         ('fine', 'finer'),
         ('thin', 'thinner'),
@@ -121,12 +121,12 @@ def test_comparative_adjectives():
         ('old', 'elder'),
     ]
 
-    for sg, pl in nouns:
-        assert sg in lemmatize(sg)
-        assert sg in lemmatize(pl)
+    for adj, comp in aa:
+        assert adj in lemmatize(adj)
+        assert adj in lemmatize(comp)
 
 def test_superlative_adjectives():
-    nouns = [
+    aa = [
         ('thin', 'thinnest'),
         ('good', 'best'),
         ('bad', 'worst'),
@@ -143,9 +143,9 @@ def test_superlative_adjectives():
         ('old', 'oldest'),
     ]
 
-    for sg, pl in nouns:
-        assert sg in lemmatize(sg)
-        assert sg in lemmatize(pl)
+    for adj, sup in aa:
+        assert adj in lemmatize(adj)
+        assert adj in lemmatize(sup)
 
 def test_conjunctions_and_prepositions():
     ww = ['a','although','an','and','at','because','beside','case','for','from','how','if','into','neither','yes','no','not','nor','of','or','per','since','than','that','the','till','to','toward','towards','unless','until','upon','versus','via','what','when','whenever','whereas','whether','while','with','without','worth']

@@ -1,4 +1,4 @@
-## EN_LEMMATIZER
+## Intro
 A dictionary-based lemmatization for quick lookup of an unknown word.
 
 
@@ -49,10 +49,10 @@ pip install git+https://github.com/Dittner/en_lemmatizer
 ## To run locally
 ```bash
 git clone https://github.com/Dittner/en_lemmatizer
-cd <Project-Dir>
+cd en_lemmatizer
 uv sync
 uv run main.py
-pytest 
+pytest tests/test_lemmatizer.py 
 ````
 
 ## License
