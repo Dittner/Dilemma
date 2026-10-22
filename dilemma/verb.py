@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from lemma.corpus import Corpus
+from dilemma.corpus import Corpus
 
 irregular_verbs = [
     ('be', 'is|are|was|were|been', ''),

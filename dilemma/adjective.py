@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from lemma.corpus import Corpus
+from dilemma.corpus import Corpus
 
 exclusions = {
     'better': 'good',

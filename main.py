@@ -1,4 +1,4 @@
-from lemma.lemmatizer import lemmatize
+from dilemma.lemmatizer import lemmatize
 
 if __name__ == '__main__':
     """

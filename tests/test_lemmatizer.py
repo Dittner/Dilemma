@@ -1,4 +1,4 @@
-from lemma.lemmatizer import lemmatize
+from dilemma.lemmatizer import lemmatize
 
 
 def test_empty_input():

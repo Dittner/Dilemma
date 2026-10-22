@@ -1,5 +1,5 @@
 ## Intro
-A dictionary-based lemmatization for quick lookup of an unknown word.
+A dictionary-based lemmatization for quick lookup of an unknown word (English only).
 
 
 ## Features
@@ -18,40 +18,40 @@ A dictionary-based lemmatization for quick lookup of an unknown word.
 
 ## Examples
 ```py
-from lemma.lemmatizer import lemmatize
+from dilemma.lemmatizer import lemmatize
 
-examples = ['missing', 'lazy', 'buries', 'criteria', 'understood', 'algae']
+examples = ['missing', 'lazy', 'buries', 'best', 'criteria', 'understood', 'algae']
 for e in examples:
     res = lemmatize(e)
     print(f'{e} -> {res}')
 ```
-
+Output:
 ```terminal
->>> missing -> ['miss', 'missing']
->>> lazy -> ['lazy']
->>> buries -> ['bury']
->>> best -> ['good', 'best']
->>> criteria -> ['criterion']
->>> understood -> ['understand']
->>> algae -> ['alga', 'algae']
+missing -> ['miss', 'missing'] # 'missing' can be a verb 'sing' with a prefix 'mis'
+lazy -> ['lazy']
+buries -> ['bury']
+best -> ['good', 'best'] # 'best' can be a verb
+criteria -> ['criterion']
+understood -> ['understand']
+algae -> ['alga', 'algae']
 ```
 
 To see more examples, look at the tests:
-https://github.com/Dittner/en_lemmatizer/blob/main/tests/test_lemmatizer.py
+https://github.com/Dittner/Dilemma/blob/main/tests/test_lemmatizer.py
 
 
 ## Install
 ```bash
-pip install git+https://github.com/Dittner/en_lemmatizer
+pip install git+https://github.com/Dittner/Dilemma
 ```
 
 ## To run locally
 ```bash
-git clone https://github.com/Dittner/en_lemmatizer
+git clone https://github.com/Dittner/Dilemma
 cd en_lemmatizer
 uv sync
 uv run main.py
-pytest tests/test_lemmatizer.py 
+uv run pytest tests/test_lemmatizer.py
 ```
 
 ## License

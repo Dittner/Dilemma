@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from lemma.corpus import Corpus
+from dilemma.corpus import Corpus
 
 pl_to_sg_exclusions = {
     'mice': 'mouse',

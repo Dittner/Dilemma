@@ -1,10 +1,10 @@
 from pathlib import Path
 
-from lemma.adjective import AdjectiveLemmatizer
-from lemma.adverb import AdverbLemmatizer
-from lemma.corpus import Corpus
-from lemma.noun import NounLemmatizer
-from lemma.verb import VerbLemmatizer
+from dilemma.adjective import AdjectiveLemmatizer
+from dilemma.adverb import AdverbLemmatizer
+from dilemma.corpus import Corpus
+from dilemma.noun import NounLemmatizer
+from dilemma.verb import VerbLemmatizer
 
 verbs = VerbLemmatizer()
 nouns = NounLemmatizer()
