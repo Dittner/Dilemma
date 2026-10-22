@@ -30,6 +30,6 @@ build-backend = "hatchling.build"
 packages = ["Dilemma"]
 
 [tool.hatch.build.targets.wheel.sources]
-"dilemma" = "dilemma"
+"dilemma" = "Dilemma"
 "data" = "dilemma/data"
 
