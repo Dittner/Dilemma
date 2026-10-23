@@ -7,12 +7,12 @@ class Corpus:
 
     def load_corpus(self, path: Path) -> list[str]:
         res = []
-        print(f'Loading and parsing file: {path.as_posix()}')
+        # print(f'Loading and parsing file: {path.as_posix()}')
         with path.open() as f:
             while True:
                 row = f.readline()
                 if row == '':
-                    print('---complete')
+                    # print('---complete')
                     break
                 else:
                     res.append(row.strip().lower())
